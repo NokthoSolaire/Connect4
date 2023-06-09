@@ -1,0 +1,209 @@
+body {
+  background: linear-gradient(180deg, #2b2e4a 0%, #090a20 100%);
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}
+
+h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 48px;
+    color: #ff00ff;
+    text-align: center;
+    text-shadow: 0 0 20px #ff00ff;
+  }
+
+
+h2 {
+  display: grid;
+  place-items: center;
+  font-size: 2.5em;
+  font-family: Damion;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  background: #15202B;
+  border-radius: 20px;
+}
+
+h2::before,
+h2::after {
+ content: '';
+ position: absolute;
+ top: -2px;
+ left: -2px;
+ background: linear-gradient(45deg,rgb(242, 5, 242),rgb(239, 239, 239), rgb(255, 79, 187), rgb(157, 66, 255),rgb(239, 239, 239), rgb(255, 79, 187));
+ background-size: 400%;
+ width: calc(100% + 4px);
+ height: calc(100% + 4px);
+ z-index: -1;
+ animation: animate 25s linear infinite;
+ border-radius: 20px;
+}
+
+h2::after {
+ filter: blur(25px);
+}
+
+@keyframes animate {
+ 0% {
+   background-position: 0 0;
+ }
+
+ 50% {
+   background-position: 400% 0;
+ }
+
+ 100% {
+   background-position: 0 0;
+ } 
+}
+
+.restart-btn {
+  margin-left:845px;
+  
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff0080;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px #ff0080;
+  box-shadow: 0px 0px 20px #ff0080;
+  transition: all 0.3s ease-in-out;
+  }
+  
+  .restart-btn:hover {
+    background-color: #f23a91;
+    text-shadow: 0px 0px 15px #f23a91;
+    box-shadow: 0px 0px 25px #f23a91;
+  }
+
+
+
+
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 630px;
+  height: 540px;
+  margin: 50px auto;
+  background-color: #000000;
+  border: 10px solid #d5a6ff;
+  border-radius: 20px;
+}
+
+.tile {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 5px solid #d5a6ff;
+  box-shadow: 0 0 20px 5px #d5a6ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px 10px #d5a6ff;
+}
+
+.red-piece {
+  animation: drop .6s linear forwards;
+  outline: 3px solid red;
+  background-color: #ff6b6b;
+  background-image: url(../assets/drogone.png);
+  background-position: center;
+  box-shadow: 0 0 20px 5px #ff6b6b;
+}
+
+.yellow-piece {
+  animation: drop .6s linear forwards;
+  background-image: url(../assets/ravens.png);
+  background-position: center;
+  width: 70px;
+  outline: 3px solid yellow;
+  height: 70px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #ffeaa7;
+  border: 5px solid #d5a6ff;
+  box-shadow: 0 0 20px 5px #ffeaa7;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes drop {
+    from {transform: translateY(-500px); opacity: 0.2;}
+    to{ transform: translateY(0px); opacity: 1;}
+}
+
+body {
+  background-color: #1a1a2e;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.scoreboard-red, .scoreboard-yellow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px;
+  width: 350px;
+  height: 60px;
+  background-color: #8f3985;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  left: 670px;
+  top:-550px;
+}
+
+.scoreboard-red p {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.scoreboard-yellow p {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+#victory-count-red, #victory-count-yellow {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e94560;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+#victory-count-yellow {
+  background-color: #f9c80e;
+}
+
+@keyframes neon-glow {
+  from {
+    box-shadow: 0px 0px 10px 2px #e94560;
+  }
+  to {
+    box-shadow: 0px 0px 20px 6px #e94560;
+  }
+}
